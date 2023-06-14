@@ -54,7 +54,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
     <link rel="stylesheet" href="<?php echo TEMPLATE_PATH; ?>customer/css/style.css">
     <link rel="stylesheet" href="<?php echo TEMPLATE_PATH; ?>customer/css/responsive.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="<?php echo HESK_PATH; ?>img/favicon/favicon.png">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -62,7 +62,33 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     <style>
-        <?php outputSearchStyling(); ?>
+        /* <?php outputSearchStyling(); ?>
+        */ @font-face {
+            font-family: "Font Awesome 5 Pro";
+            font-style: normal;
+            font-weight: 300;
+            font-display: auto;
+            src: url(../../../../fonts/fa-light-300.eot);
+            src: url(../../../../fonts/fa-light-300.eot?#iefix) format("embedded-opentype"), url(../../../../fonts/fa-light-300.woff2) format("woff2"), url(../../../../fonts/fa-light-300.woff) format("woff"), url(../../../../fonts/fa-light-300.ttf) format("truetype"), url(../../../../fonts/fa-light-300.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "Font Awesome 5 Pro";
+            font-style: normal;
+            font-weight: 400;
+            font-display: auto;
+            src: url(../../../../fonts/fa-regular-400.eot);
+            src: url(../../../../fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(../../../../fonts/fa-regular-400.woff2) format("woff2"), url(../../../../fonts/fa-regular-400.woff) format("woff"), url(../../../../fonts/fa-regular-400.ttf) format("truetype"), url(../../../../fonts/fa-regular-400.svg#fontawesome) format("svg")
+        }
+
+        @font-face {
+            font-family: "Font Awesome 5 Pro";
+            font-style: normal;
+            font-weight: 900;
+            font-display: auto;
+            src: url(../../../../fonts/fa-solid-900.eot);
+            src: url(../../../../fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../../../../fonts/fa-solid-900.woff2) format("woff2"), url(../../../../fonts/fa-solid-900.woff) format("woff"), url(../../../../fonts/fa-solid-900.ttf) format("truetype"), url(../../../../fonts/fa-solid-900.svg#fontawesome) format("svg")
+        }
     </style>
 
 </head>
@@ -82,7 +108,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                         <ul>
                             <li><a href="#" class="smoothscroll">Beranda</a></li>
                             <li><a href="index.php?a=add">Kirim Aduan</a></li>
-                            <li><a href="#" class="smoothscroll">Lihat Aduan</a></li>
+                            <li><a href="ticket.php">Lihat Aduan</a></li>
                             <li><a href="#" class="smoothscroll">Statistik</a></li>
                         </ul>
                     </div>
@@ -91,6 +117,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                     <div class="header-right">
                         <ul class="links">
                             <li><a href="#">ID</a></li>
+                            <li><a href="#">EN</a></li>
                         </ul>
                         <div class="get-quote">
                             <a href="<?php echo $hesk_settings['admin_dir']; ?>/" class="link btn-style-1">Masuk</a>
@@ -100,6 +127,11 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             </div>
         </div>
     </header>
+
+    <a href="https://wa.me/62816561337" class=" btn-float">
+        <span class="fa fa-phone item-float"></span>
+    </a>
+
     <section class="hero-area">
         <div class="hero-bg-left"><img src="<?php echo HESK_PATH; ?>img/wan/hero-left-bg.png" alt=""></div>
         <div class="hero-bg-right"><img src="<?php echo HESK_PATH; ?>img/wan/hero-right-bg.png" alt=""></div>
@@ -116,13 +148,19 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                 <div class="col-lg-7 col-md-7 col-12">
                     <div class="hero-content">
                         <p class="btn-style-outline-1 welcome">Selamat Datang di Dumas</p>
-                        <h2 class="title"><span class="light">Empower <br> Your Business</span> Better & Faster.</h2>
+                        <h2 class="title"><span class="light">Portal Layanan dan Pengaduan <br> </span> UIN Malang.
+                        </h2>
                         <div class="start-video">
-                            <a href="index.php?a=add"" class=" start btn-style-1 btn-hvr-anim-top">
-                                <?php echo $hesklang['submit_ticket']; ?>
+                            <a href="knowledgebase.php"" style=" overflow: hidden;"
+                                class=" start btn-style-1 btn-hvr-anim-top">
+                                Cari Panduan Layanan
                             </a>
-                            <a class="popup-youtube btn-ripple-out"
-                                href="https://www.youtube.com/watch?v=QOtuX0jL85Y"><i class="fas fa-play"></i></a>
+                            <a href="index.php?a=add"" class=" start btn-style-outline-2">
+                                Kirim Aduan
+                            </a>
+                            <!-- <a href="#" class="quote btn-style-outline-1">Kirim Aduan</a> -->
+                            <a class="popup-youtube btn-ripple-out" href="https://www.youtube.com/watch?v=QOtuX0jL85Y"
+                                style="overflow: hidden;"><i class="fas fa-play"></i></a>
                         </div>
                     </div>
                 </div>
@@ -153,8 +191,9 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-12">
                     <div class="section-title">
-                        <h5 class="intro">About Us</h5>
-                        <h2 class="title">A Team Of Passionate Designers & Developers From New York.</h2>
+                        <h5 class="intro">Tentang Dumas</h5>
+                        <h2 class="title">DUMAS (Aduan Masyarakat) adalah Portal pelayanan seputar UIN Malang
+                            .</h2>
                     </div>
                 </div>
             </div>
@@ -174,9 +213,8 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                                                 class="fal fa-laptop"></i></span>
                                     </div>
                                     <div class="content">
-                                        <h2 class="name">UI/UX Design</h2>
-                                        <p class="text">Landing Pages, User Flow, Wireframing, Prototyping, Mobile
-                                            AppDesign, Web App</p>
+                                        <h2 class="name">Pusat Layanan</h2>
+                                        <p class="text">Anda dapat mencari informasi layanan dan mengajukan Aduan</p>
                                     </div>
                                 </div>
                                 <div class="about-box">
@@ -186,9 +224,9 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                                                 class="fal fa-chart-line"></i></span>
                                     </div>
                                     <div class="content">
-                                        <h2 class="name">Branding</h2>
-                                        <p class="text">Landing Pages, User Flow, Wireframing, Prototyping, Mobile
-                                            AppDesign, Web App</p>
+                                        <h2 class="name">Statistik</h2>
+                                        <p class="text">Informasi terkait statistik aduan dan tanggapan yang
+                                            terselesaikan</p>
                                     </div>
                                 </div>
                             </div>
@@ -199,24 +237,23 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                                     <div class="icon-box">
                                         <span class="color-3 icon"
                                             style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-3.png)"><i
-                                                class="fal fa-carrot"></i></span>
+                                                class="fal fa-paper-plane"></i></span>
                                     </div>
                                     <div class="content">
-                                        <h2 class="name">Web Design</h2>
-                                        <p class="text">Landing Pages, User Flow, Wireframing, Prototyping, Mobile
-                                            AppDesign, Web App</p>
+                                        <h2 class="name">Email Balasan</h2>
+                                        <p class="text">Jawaban dari aduan akan dikonfirmasi via email</p>
                                     </div>
                                 </div>
                                 <div class="about-box">
                                     <div class="icon-box">
                                         <span class="color-4 icon"
                                             style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-4.png)"><i
-                                                class="fal fa-cube"></i></span>
+                                                class="fal fa-bookmark"></i></span>
                                     </div>
                                     <div class="content">
-                                        <h2 class="name">Product Design</h2>
-                                        <p class="text">Landing Pages, User Flow, Wireframing, Prototyping, Mobile
-                                            AppDesign, Web App</p>
+                                        <h2 class="name">Rekam Jejak</h2>
+                                        <p class="text">Aduan yang pernah terkirim dapat dilihat kembali melaui fitur
+                                            lihat aduan</p>
                                     </div>
                                 </div>
                             </div>
@@ -225,117 +262,17 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                 </div>
                 <div class="col-lg-6 col-md-7 col-12 d-flex align-items-center">
                     <div class="about-right-content section-title">
-                        <h5 class="intro">Our Services</h5>
-                        <h2 class="title">Grow Business <span class="bold">With Wan.</span></h2>
-                        <p class="text">We’ve been working with some awesome teams around the world. </p>
-                        <a href="#" class="quote btn-style-outline-1">Get A Quote</a>
+                        <h5 class="intro">Fitur</h5>
+                        <h2 class="title">Temukan di <span class="bold">Dumas.</span></h2>
+                        <p class="text">Kamu dapat menemukan seluruh panduan dasar dan informasi layanan di UIN
+                            Malang dengan
+                            Dumas. </p>
+                        <a href="knowledgebase.php" class="quote btn-style-outline-1">Daftar Panduan</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="testimonial-area" id="_testimonial" style="background: url(<?php echo HESK_PATH; ?>img/wan/testimonial-bg.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-color: #f8fbff;">
-        <div class="testimonial-right-banner wow fadeInRight" data-wow-duration="1.0s" data-wow-delay="0.5s"><img
-                src="<?php echo HESK_PATH; ?>/img/wan/testimonial-right-banner.png" alt=""></div>
-        <div class="testimoinal-left-banner wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s"><img
-                src="<?php echo HESK_PATH; ?>/img/wan/testimonial-left-banner.png" alt=""></div>
-        <div class="testimonial-bottom-line"><img src="<?php echo HESK_PATH; ?>/img/wan/testimonial-line-bg.png" alt="">
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="testimonial-section-title section-title">
-                        <h5 class="intro">Testimonials</h5>
-                        <h2 class="title">Our Happy Clients Say’s About Us.</h2>
-                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <div class="testimonial-carousel owl-carousel">
-                        <div class="single-testimonial">
-                            <div class="rating-cause">
-                                <ul class="rating">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star-half-alt"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <p class="cause">“ Design Quality “</p>
-                            </div>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do veiusmod
-                                tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercit ation ullamco laboris nisi ut aliquip ex ea commodo consequat nickita.
-                            </p>
-                            <div class="autor">
-                                <div class="img"><img src="<?php echo HESK_PATH; ?>/img/wan/testimonial-author-1.png"
-                                        alt=""></div>
-                                <div class="info">
-                                    <h4 class="name">Rosalina D. William</h4>
-                                    <h6 class="desg">Founder, Google</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-testimonial">
-                            <div class="rating-cause">
-                                <ul class="rating">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star-half-alt"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <p class="cause">“ Design Quality “</p>
-                            </div>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do veiusmod
-                                tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercit ation ullamco laboris nisi ut aliquip ex ea commodo consequat nickita.
-                            </p>
-                            <div class="autor">
-                                <div class="img"><img src="<?php echo HESK_PATH; ?>/img/wan/testimonial-author-2.png"
-                                        alt=""></div>
-                                <div class="info">
-                                    <h4 class="name">Hiliam B Baldes</h4>
-                                    <h6 class="desg">Founder, Google</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single-testimonial">
-                            <div class="rating-cause">
-                                <ul class="rating">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star-half-alt"></i></li>
-                                    <li><i class="far fa-star"></i></li>
-                                </ul>
-                                <p class="cause">“ Design Quality “</p>
-                            </div>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do veiusmod
-                                tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercit ation ullamco laboris nisi ut aliquip ex ea commodo consequat nickita.
-                            </p>
-                            <div class="autor">
-                                <div class="img"><img src="img/home1/testimonial-author-3.png" alt=""></div>
-                                <div class="info">
-                                    <h4 class="name">Rosalina D. William</h4>
-                                    <h6 class="desg">Founder, Google</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- <?php
     /*******************************************************************************
     The code below handles HESK licensing and must be included in the template.
