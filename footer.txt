@@ -1,0 +1,10 @@
+<!-- Custom code to be included before </body> tag -->
+<!-- <link rel="stylesheet" href="/css/dora.css">
+
+<div class="copyright">
+    <div class="container">
+        <p>
+            Developed Masuk by <a href="https://ptipd.uin-malang.ac.id/">PTIPD UIN Malang</a> © 2023
+        </p>
+    </div>
+</div> -->
