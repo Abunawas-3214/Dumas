@@ -1,48 +1,48 @@
 <?php
 /*
-*
-* Language file for Help Desk Software HESK (https://www.hesk.com)
-* Language: Bahasa Indonesia (Indonesian)
-* Version: 3.4.x
-*
-* ==> CONTRIBUTORS
-*
-* Josh (https://pob-tech.com)
-*
-* ==> HOW TO TRANSLATE THIS FILE
-*
-* https://www.hesk.com/knowledgebase/?article=34
-*
-* ==> HOW TO CUSTOMIZE TEXT
-*
-* Do NOT customize text inside here, it will be overwritten by updates!
-*
-* Follow this guide instead:
-* https://www.hesk.com/knowledgebase/?article=88
-*
-* ==> IMPORTANT: FILE ENCODING
-*
-* This file *must* be saved in UTF-8 encoding without byte order mark (BOM)
-* Test chars: àáâãäåæ
-*
-* https://www.hesk.com/knowledgebase/?article=87
-*
-*/
+ *
+ * Language file for Help Desk Software HESK (https://www.hesk.com)
+ * Language: Bahasa Indonesia (Indonesian)
+ * Version: 3.4.x
+ *
+ * ==> CONTRIBUTORS
+ *
+ * Josh (https://pob-tech.com)
+ *
+ * ==> HOW TO TRANSLATE THIS FILE
+ *
+ * https://www.hesk.com/knowledgebase/?article=34
+ *
+ * ==> HOW TO CUSTOMIZE TEXT
+ *
+ * Do NOT customize text inside here, it will be overwritten by updates!
+ *
+ * Follow this guide instead:
+ * https://www.hesk.com/knowledgebase/?article=88
+ *
+ * ==> IMPORTANT: FILE ENCODING
+ *
+ * This file *must* be saved in UTF-8 encoding without byte order mark (BOM)
+ * Test chars: àáâãäåæ
+ *
+ * https://www.hesk.com/knowledgebase/?article=87
+ *
+ */
 
 // Native name of language, for example: Deutsch
-$hesklang['LANGUAGE']='Bahasa Indonesia';
+$hesklang['LANGUAGE'] = 'Bahasa Indonesia';
 
 // English name of language, for example: German
-$hesklang['LANGUAGE_EN']='Indonesian';
+$hesklang['LANGUAGE_EN'] = 'Indonesian';
 
 // Language encoding. It MUST be set to UTF-8 for all languages!
-$hesklang['ENCODING']='UTF-8';
+$hesklang['ENCODING'] = 'UTF-8';
 
 // MySQL utf8 collation. Do not change if not sure what to use.
-$hesklang['_COLLATE']='utf8_unicode_ci';
+$hesklang['_COLLATE'] = 'utf8_unicode_ci';
 
 // This is the email break line that will be used in email piping
-$hesklang['EMAIL_HR']='------ Balas di atas garis ini ------';
+$hesklang['EMAIL_HR'] = '------ Balas di atas garis ini ------';
 
 // EMAIL SUBJECTS
 $hesklang['new_ticket_staff'] = '[#%%TRACK_ID%%] Aduan baru: %%SUBJECT%%';
@@ -1426,7 +1426,7 @@ $hesklang['et_empty'] = 'Template email harus diisi';
 $hesklang['et_saved'] = 'Template email disimpan';
 $hesklang['source'] = 'Sumber';
 $hesklang['select_category'] = 'Pilih sebuah kategori';
-$hesklang['select_category_text'] = 'Pilih jenis layanan';
+$hesklang['select_category_text'] = 'Ada yang bisa kami bantu?';
 $hesklang['select_category_staff'] = 'Pilih kategori Aduan';
 $hesklang['scat'] = 'Batas pilihan kategori';
 $hesklang['scat2'] = '(sebuah kotak pilihan akan ditampilkan jika jumlah kategori lebih tinggi)';
@@ -2131,4 +2131,5 @@ $hesklang['can_due_date'] = 'Can set due date'; // Permission to set and modify 
 $hesklang['can_due_date_e'] = 'You do not have permission to set due dates';
 
 // DO NOT CHANGE BELOW
-if (!defined('IN_SCRIPT')) die('PHP syntax OK!');
+if (!defined('IN_SCRIPT'))
+    die('PHP syntax OK!');

@@ -68,8 +68,8 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             font-style: normal;
             font-weight: 300;
             font-display: auto;
-            src: url(../../../../fonts/fa-light-300.eot);
-            src: url(../../../../fonts/fa-light-300.eot?#iefix) format("embedded-opentype"), url(../../../../fonts/fa-light-300.woff2) format("woff2"), url(../../../../fonts/fa-light-300.woff) format("woff"), url(../../../../fonts/fa-light-300.ttf) format("truetype"), url(../../../../fonts/fa-light-300.svg#fontawesome) format("svg")
+            src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-light-300.eot);
+            src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-light-300.eot?#iefix) format("embedded-opentype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-light-300.woff2) format("woff2"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-light-300.woff) format("woff"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-light-300.ttf) format("truetype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-light-300.svg#fontawesome) format("svg")
         }
 
         @font-face {
@@ -77,8 +77,8 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             font-style: normal;
             font-weight: 400;
             font-display: auto;
-            src: url(../../../../fonts/fa-regular-400.eot);
-            src: url(../../../../fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(../../../../fonts/fa-regular-400.woff2) format("woff2"), url(../../../../fonts/fa-regular-400.woff) format("woff"), url(../../../../fonts/fa-regular-400.ttf) format("truetype"), url(../../../../fonts/fa-regular-400.svg#fontawesome) format("svg")
+            src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-regular-400.eot);
+            src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-regular-400.woff2) format("woff2"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-regular-400.woff) format("woff"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-regular-400.ttf) format("truetype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-regular-400.svg#fontawesome) format("svg")
         }
 
         @font-face {
@@ -86,8 +86,8 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             font-style: normal;
             font-weight: 900;
             font-display: auto;
-            src: url(../../../../fonts/fa-solid-900.eot);
-            src: url(../../../../fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../../../../fonts/fa-solid-900.woff2) format("woff2"), url(../../../../fonts/fa-solid-900.woff) format("woff"), url(../../../../fonts/fa-solid-900.ttf) format("truetype"), url(../../../../fonts/fa-solid-900.svg#fontawesome) format("svg")
+            src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.eot);
+            src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.woff2) format("woff2"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.woff) format("woff"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.ttf) format("truetype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.svg#fontawesome) format("svg")
         }
     </style>
 
@@ -128,8 +128,10 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
         </div>
     </header>
 
+    <!-- Floating button -->
+
     <a href="https://wa.me/62816561337" class=" btn-float">
-        <span class="fa fa-phone item-float"></span>
+        <span class="fa fa-phone item-float" aria-hidden="true"></span>
     </a>
 
     <section class="hero-area">
@@ -151,14 +153,15 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                         <h2 class="title"><span class="light">Portal Layanan dan Pengaduan <br> </span> UIN Malang.
                         </h2>
                         <div class="start-video">
-                            <a href="knowledgebase.php"" style=" overflow: hidden;"
+                            <a href="knowledgebase.php" style=" overflow: hidden;"
                                 class=" start btn-style-1 btn-hvr-anim-top">
                                 Cari Panduan Layanan
                             </a>
-                            <a href="index.php?a=add"" class=" start btn-style-outline-2">
+                            <a href="#ticketModal"" class=" start btn-style-outline-2" data-toggle="modal"
+                                data-traget="#ticketModal">
                                 Kirim Aduan
                             </a>
-                            <!-- <a href="#" class="quote btn-style-outline-1">Kirim Aduan</a> -->
+                            <!-- <a href="#" class="quote btn-style-outline-1">Kirim Aduan</a>  -->
                             <a class="popup-youtube btn-ripple-out" href="https://www.youtube.com/watch?v=QOtuX0jL85Y"
                                 style="overflow: hidden;"><i class="fas fa-play"></i></a>
                         </div>
@@ -191,8 +194,8 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-12">
                     <div class="section-title">
-                        <h5 class="intro">Tentang Dumas</h5>
-                        <h2 class="title">DUMAS (Aduan Masyarakat) adalah Portal pelayanan seputar UIN Malang
+                        <h5 class="intro">Tentang</h5>
+                        <h2 class="title">DUMAS (Pengaduan Masyarakat) adalah portal pelayanan seputar UIN Malang
                             .</h2>
                     </div>
                 </div>
@@ -273,6 +276,35 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Aduan Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="h1">Sebelum anda menambahkan aduan, pastikan anda telah melihat Daftar Panduan dari
+                        layanan yang anda
+                        cari. Apabila anda tidak menemukan aduan anda di daftar panduan, anda bisa mengirimkan aduan
+                        baru sesuai kategori yang tersedia</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-warning" onclick=" window.location.href='knowledgebase.php'
+                        ;">Lihat Daftar Panduan</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="window.location.href='index.php?a=add';">Kirim Aduan</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- <?php
     /*******************************************************************************
     The code below handles HESK licensing and must be included in the template.
@@ -300,9 +332,20 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
         <div class="footer-top-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-3 col-12">
+                    <div class="col-lg-4 col-sm-3">
                         <div class="fta-logo">
                             <a href="index.html" class="link"><img src="img/dumaslogo.png"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 offset-sm-1 col-sm-9 col-12">
+                        <div class="fta-menu">
+                            <img src="<?php echo HESK_PATH; ?>/img/sponsor/AunQa.png" />
+                            <img src="<?php echo HESK_PATH; ?>/img/sponsor/blu.png" />
+                            <img src="<?php echo HESK_PATH; ?>/img/sponsor/banpt.png" />
+                            <img src="<?php echo HESK_PATH; ?>/img/sponsor/jaz.png" />
+                            <img src="<?php echo HESK_PATH; ?>/img/sponsor/msciso9001.png" />
+                            <img src="<?php echo HESK_PATH; ?>/img/sponsor/pusaka.png" />
+                            <img src="<?php echo HESK_PATH; ?>/img/sponsor/kampusmerdeka.png" />
                         </div>
                     </div>
                 </div>
@@ -313,7 +356,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 col-12">
                         <div class="fba-social">
-                            <p class="copyright">Copyright By PTIPD UIN Malang - 2023</p>
+                            <p class="copyright">Powered By PTIPD UIN Malang - 2023</p>
                         </div>
                     </div>
                 </div>

@@ -1258,7 +1258,7 @@ header .header-container .header-right .get-quote {
 }
 
 .hero-area .hero-content .start-video .popup-youtube::before {
-  border-color: #03a3f0;
+  border-color: #a9b5c9;
 }
 
 /* 1.3 About */
@@ -1942,6 +1942,7 @@ footer .footer-top-area .fta-logo .link .color {
 }
 
 footer .footer-top-area .fta-menu {
+  height: 80px;
   text-align: right;
   padding: 16px 0;
 }
@@ -1949,6 +1950,11 @@ footer .footer-top-area .fta-menu {
 footer .footer-top-area .fta-menu .menu {
   padding: 0;
   list-style: none;
+}
+
+footer .footer-top-area .fta-menu img {
+  max-height: 100%;
+  margin: 0 6px;
 }
 
 footer .footer-top-area .fta-menu .menu li {
