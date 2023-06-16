@@ -89,6 +89,166 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.eot);
             src: url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.woff2) format("woff2"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.woff) format("woff"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.ttf) format("truetype"), url(<?php echo TEMPLATE_PATH; ?>customer/fonts/fa-solid-900.svg#fontawesome) format("svg")
         }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-SemiBoldItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-SemiBoldItalic.woff') format('woff');
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-BoldItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-BoldItalic.woff') format('woff');
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-MediumItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-MediumItalic.woff') format('woff');
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-LightItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-LightItalic.woff') format('woff');
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-UltraLightItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-UltraLightItalic.woff') format('woff');
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-ExtraBoldItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-ExtraBoldItalic.woff') format('woff');
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-ExtraBold.woff') format('woff');
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Regular.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Heavy.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Heavy.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Thin.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Thin.woff') format('woff');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Bold.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy-RegularItalic';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-RegularItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-RegularItalic.woff') format('woff');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-BlackItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-BlackItalic.woff') format('woff');
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-HeavyItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-HeavyItalic.woff') format('woff');
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-ThinItalic.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-ThinItalic.woff') format('woff');
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-SemiBold.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-SemiBold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-UltraLight.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-UltraLight.woff') format('woff');
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Black.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Black.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Medium.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gilroy';
+            src: url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Light.woff2') format('woff2'),
+                url('<?php echo TEMPLATE_PATH; ?>customer/fonts/Gilroy-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+        }
     </style>
 
 </head>
@@ -109,7 +269,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                             <li><a href="#" class="smoothscroll">Beranda</a></li>
                             <li><a href="index.php?a=add">Kirim Aduan</a></li>
                             <li><a href="ticket.php">Lihat Aduan</a></li>
-                            <li><a href="#" class="smoothscroll">Statistik</a></li>
+                            <li><a href="statistik.php">Statistik</a></li>
                         </ul>
                     </div>
                 </div>
@@ -127,12 +287,6 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             </div>
         </div>
     </header>
-
-    <!-- Floating button -->
-
-    <a href="https://wa.me/62816561337" class=" btn-float">
-        <span class="fa fa-phone item-float" aria-hidden="true"></span>
-    </a>
 
     <section class="hero-area">
         <div class="hero-bg-left"><img src="<?php echo HESK_PATH; ?>img/wan/hero-left-bg.png" alt=""></div>
@@ -161,9 +315,8 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                                 data-traget="#ticketModal">
                                 Kirim Aduan
                             </a>
-                            <!-- <a href="#" class="quote btn-style-outline-1">Kirim Aduan</a>  -->
-                            <a class="popup-youtube btn-ripple-out" href="https://www.youtube.com/watch?v=QOtuX0jL85Y"
-                                style="overflow: hidden;"><i class="fas fa-play"></i></a>
+                            <!-- <a class="popup-youtube btn-ripple-out" href="https://www.youtube.com/watch?v=QOtuX0jL85Y"
+                                style="overflow: hidden;"><i class="fas fa-play"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -276,6 +429,13 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             </div>
         </div>
     </section>
+
+    <!-- Floating button -->
+
+    <a href="https://wa.me/62816561337" class=" btn-float">
+        <span class="fa fa-phone item-float" aria-hidden="true"></span>
+    </a>
+
 
     <!-- Modal -->
 
