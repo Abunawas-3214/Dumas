@@ -100,9 +100,9 @@ getStatisticData();
 </head>
 
 <body>
-    <div style="text-align:center">
+    <div style="text-align:center" class="form-group">
         <label style="font-size:14" for="filter-tahun">Pilih tahun:</label>
-        <select class="col-sm-2 col-form-control" name="filter-tahun" id="filter-tahun">
+        <select class="col-sm-2 form-control-lg" name="filter-tahun" id="filter-tahun">
             <option value="2022">2022</option>
             <option value="2023" selected>2023</option>
         </select>

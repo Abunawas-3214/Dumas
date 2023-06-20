@@ -63,7 +63,10 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
         <![endif]-->
     <style>
         /* <?php outputSearchStyling(); ?>
-        */ @font-face {
+        */
+
+        /* Font Awesome */
+        @font-face {
             font-family: "Font Awesome 5 Pro";
             font-style: normal;
             font-weight: 300;
@@ -249,6 +252,17 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
             font-weight: 300;
             font-style: normal;
         }
+
+        div#preloader {
+            background: #fff url("<?php echo HESK_PATH; ?>img/wan/loader.gif") no-repeat scroll center center;
+            height: 100%;
+            left: 0;
+            overflow: visible;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
     </style>
 
 </head>
@@ -307,11 +321,10 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                         <h2 class="title"><span class="light">Portal Layanan dan Pengaduan <br> </span> UIN Malang.
                         </h2>
                         <div class="start-video">
-                            <a href="knowledgebase.php" style=" overflow: hidden;"
-                                class=" start btn-style-1 btn-hvr-anim-top">
+                            <a href="knowledgebase.php" class=" start btn-style-1 btn-hvr-anim-top">
                                 Cari Panduan Layanan
                             </a>
-                            <a href="#ticketModal"" class=" start btn-style-outline-2" data-toggle="modal"
+                            <a href="#ticketModal"" class=" start btn-style-2 btn-hvr-anim-top" data-toggle="modal"
                                 data-traget="#ticketModal">
                                 Kirim Aduan
                             </a>

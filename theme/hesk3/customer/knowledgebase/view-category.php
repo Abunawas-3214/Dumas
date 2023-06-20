@@ -399,7 +399,7 @@ $service_message_type_to_class = array(
                 <?php endif; ?>
             </div>
         </div>
-<?php
+<!-- <?php
 /*******************************************************************************
 The code below handles HESK licensing and must be included in the template.
 
@@ -419,7 +419,7 @@ m9vdGVyPg0K',"\104", "a809404e0adf9823405ee0b536e5701fb7d3c969");
 /*******************************************************************************
 END LICENSE CODE
 *******************************************************************************/
-?>
+?> -->
     </main>
 </div>
 <?php include(TEMPLATE_PATH . '../../footer.txt'); ?>
