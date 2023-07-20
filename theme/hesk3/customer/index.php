@@ -293,9 +293,9 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                             <li><a href="#">ID</a></li>
                             <li><a href="#">EN</a></li>
                         </ul>
-                        <div class="get-quote">
+                        <!-- <div class="get-quote">
                             <a href="<?php echo $hesk_settings['admin_dir']; ?>/" class="link btn-style-1">Masuk</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -436,7 +436,10 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                         <p class="text">Kamu dapat menemukan seluruh panduan dasar dan informasi layanan di UIN
                             Malang dengan
                             Dumas. </p>
-                        <a href="knowledgebase.php" class="quote btn-style-outline-1">Daftar Panduan</a>
+                        <a href="<?php echo $hesk_settings['admin_dir']; ?>/" target="_blank"
+                            class="quote btn-style-outline-1">
+                            Masuk Panel Admin
+                        </a>
                     </div>
                 </div>
             </div>
@@ -444,9 +447,8 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
     </section>
 
     <!-- Floating button -->
-
-    <a href="https://wa.me/62816561337" class=" btn-float">
-        <span class="fa fa-phone item-float" aria-hidden="true"></span>
+    <a href="https://wa.me/62816561337" target="_blank" rel="noopener noreferrer" class="btn-float">
+        <img src="<?php echo HESK_PATH; ?>/img/icons8-whatsapp-100.png">
     </a>
 
 
