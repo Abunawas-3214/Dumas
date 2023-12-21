@@ -305,14 +305,10 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
     <section class="hero-area">
         <div class="hero-bg-left"><img src="<?php echo HESK_PATH; ?>img/wan/hero-left-bg.png" alt=""></div>
         <div class="hero-bg-right"><img src="<?php echo HESK_PATH; ?>img/wan/hero-right-bg.png" alt=""></div>
-        <div class="hero-dot-bg-1 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="1.0s"><img src="<?php echo HESK_PATH; ?>img/wan/hero-top-center-dot.png" alt=""></div>
-        <div class="hero-dot-bg-2 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="2.0s"><img src="<?php echo HESK_PATH; ?>img/wan/hero-left-dot.png" alt=""></div>
-        <div class="hero-dot-bg-3 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="3.0s"><img src="<?php echo HESK_PATH; ?>img/wan/hero-bottom-left-dot.png" alt=""></div>
-        <div class="hero-banner wow fadeIn animated" data-wow-duration="1.0s" data-wow-delay="1.0s"><img
-                class="item-bounce" src="<?php echo HESK_PATH; ?>img/wan/hero-banner.png" alt=""></div>
+        <div class="hero-dot-bg-1 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="1.0s"><img src="<?php echo HESK_PATH; ?>img/wan/hero-top-center-dot.png" alt=""></div>
+        <div class="hero-dot-bg-2 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="2.0s"><img src="<?php echo HESK_PATH; ?>img/wan/hero-left-dot.png" alt=""></div>
+        <div class="hero-dot-bg-3 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="3.0s"><img src="<?php echo HESK_PATH; ?>img/wan/hero-bottom-left-dot.png" alt=""></div>
+        <div class="hero-banner wow fadeIn animated" data-wow-duration="1.0s" data-wow-delay="1.0s"><img class="item-bounce" src="<?php echo HESK_PATH; ?>img/wan/hero-banner.png" alt=""></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-7 col-12">
@@ -324,12 +320,10 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                             <a href="knowledgebase.php" class=" start btn-style-1 btn-hvr-anim-top">
                                 Cari Panduan Layanan
                             </a>
-                            <a href="#ticketModal"" class=" start btn-style-2 btn-hvr-anim-top" data-toggle="modal"
-                                data-traget="#ticketModal">
+                            <a href="#ticketModal"" class=" start btn-style-2 btn-hvr-anim-top" data-toggle="modal" data-traget="#ticketModal">
                                 Kirim Aduan
                             </a>
-                            <!-- <a class="popup-youtube btn-ripple-out" href="https://www.youtube.com/watch?v=QOtuX0jL85Y"
-                                style="overflow: hidden;"><i class="fas fa-play"></i></a> -->
+                            <!-- <a class="popup-youtube btn-ripple-out" href="https://www.youtube.com/watch?v=QOtuX0jL85Y" style="overflow: hidden;"><i class="fas fa-play"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -337,25 +331,16 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
         </div>
     </section>
     <section class="about-area" id="_about">
-        <div class="about-dot-bg-1 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="1.0s"><img src="<?php echo HESK_PATH; ?>img/wan/about-left-dot.png" alt=""></div>
-        <div class="about-dot-bg-2 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="1.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-top-right-dot.png" alt=""></div>
-        <div class="about-dot-bg-3 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="2.0s"><img src="<?php echo HESK_PATH; ?>img/wan/about-bottom-right-dot.png" alt=""></div>
-        <div class="about-dot-bg-4 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="2.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-center-dot.png" alt=""></div>
-        <div class="about-dot-bg-5 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="3.0s"><img src="<?php echo HESK_PATH; ?>img/wan/about-left-bottom-dot.png" alt=""></div>
-        <div class="about-dot-bg-6 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s"
-            data-wow-delay="3.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-right-bottom-dot.png" alt=""></div>
-        <div class="about-banner-contact wow fadeInRight" data-wow-duration="1.0s" data-wow-delay="0.5s"><img
-                src="<?php echo HESK_PATH; ?>img/wan/about-contact-banner.png" alt=""></div>
+        <div class="about-dot-bg-1 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="1.0s"><img src="<?php echo HESK_PATH; ?>img/wan/about-left-dot.png" alt=""></div>
+        <div class="about-dot-bg-2 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="1.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-top-right-dot.png" alt=""></div>
+        <div class="about-dot-bg-3 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="2.0s"><img src="<?php echo HESK_PATH; ?>img/wan/about-bottom-right-dot.png" alt=""></div>
+        <div class="about-dot-bg-4 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="2.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-center-dot.png" alt=""></div>
+        <div class="about-dot-bg-5 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="3.0s"><img src="<?php echo HESK_PATH; ?>img/wan/about-left-bottom-dot.png" alt=""></div>
+        <div class="about-dot-bg-6 wow bounceIn" data-wow-iteration="infinite" data-wow-duration="5.0s" data-wow-delay="3.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-right-bottom-dot.png" alt=""></div>
+        <div class="about-banner-contact wow fadeInRight" data-wow-duration="1.0s" data-wow-delay="0.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-contact-banner.png" alt=""></div>
         <div class="about-right-bg"><img src="<?php echo HESK_PATH; ?>img/wan/about-right-bg.png" alt=""></div>
-        <div class="about-left-bg wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s"><img
-                src="<?php echo HESK_PATH; ?>img/wan/about-left-banner.png" alt=""></div>
-        <div class="about-top-plant wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s"><img
-                src="<?php echo HESK_PATH; ?>img/wan/about-plant.png" alt=""></div>
+        <div class="about-left-bg wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-left-banner.png" alt=""></div>
+        <div class="about-top-plant wow fadeInLeft" data-wow-duration="1.0s" data-wow-delay="0.5s"><img src="<?php echo HESK_PATH; ?>img/wan/about-plant.png" alt=""></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 col-12">
@@ -373,13 +358,10 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                 <div class="col-lg-6 col-12">
                     <div class="about-all-boxes">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp animated" data-wow-delay="00ms"
-                                data-wow-duration="1500ms">
+                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                                 <div class="about-box">
                                     <div class="icon-box">
-                                        <span class="color-1 icon"
-                                            style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-1.png)"><i
-                                                class="fal fa-laptop"></i></span>
+                                        <span class="color-1 icon" style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-1.png)"><i class="fal fa-laptop"></i></span>
                                     </div>
                                     <div class="content">
                                         <h2 class="name">Pusat Layanan</h2>
@@ -388,9 +370,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                                 </div>
                                 <div class="about-box">
                                     <div class="icon-box">
-                                        <span class="color-2 icon"
-                                            style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-2.png)"><i
-                                                class="fal fa-chart-line"></i></span>
+                                        <span class="color-2 icon" style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-2.png)"><i class="fal fa-chart-line"></i></span>
                                     </div>
                                     <div class="content">
                                         <h2 class="name">Statistik</h2>
@@ -399,14 +379,11 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp animated" data-wow-delay="300ms"
-                                data-wow-duration="1500ms">
+                            <div class="col-lg-6 col-sm-6 col-12 wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
                                 <div class="about-box-martop80 mar-top-80"></div>
                                 <div class="about-box">
                                     <div class="icon-box">
-                                        <span class="color-3 icon"
-                                            style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-3.png)"><i
-                                                class="fal fa-paper-plane"></i></span>
+                                        <span class="color-3 icon" style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-3.png)"><i class="fal fa-paper-plane"></i></span>
                                     </div>
                                     <div class="content">
                                         <h2 class="name">Email Balasan</h2>
@@ -415,9 +392,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                                 </div>
                                 <div class="about-box">
                                     <div class="icon-box">
-                                        <span class="color-4 icon"
-                                            style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-4.png)"><i
-                                                class="fal fa-bookmark"></i></span>
+                                        <span class="color-4 icon" style="background: url(<?php echo HESK_PATH; ?>/img/wan/about-icon-bg-4.png)"><i class="fal fa-bookmark"></i></span>
                                     </div>
                                     <div class="content">
                                         <h2 class="name">Rekam Jejak</h2>
@@ -436,8 +411,7 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                         <p class="text">Kamu dapat menemukan seluruh panduan dasar dan informasi layanan di UIN
                             Malang dengan
                             Dumas. </p>
-                        <a href="<?php echo $hesk_settings['admin_dir']; ?>/" target="_blank"
-                            class="quote btn-style-outline-1">
+                        <a href="<?php echo $hesk_settings['admin_dir']; ?>/" target="_blank" class="quote btn-style-outline-1">
                             Masuk Panel Admin
                         </a>
                     </div>
@@ -453,9 +427,47 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
 
 
     <!-- Modal -->
+    <div class="modal fade" id="onLoadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="<?php echo TEMPLATE_PATH; ?>customer/img/modal/Dumas-1.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="<?php echo TEMPLATE_PATH; ?>customer/img/modal/Dumas-2.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="<?php echo TEMPLATE_PATH; ?>customer/img/modal/Dumas-3.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
 
-    <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+
+    <div class="modal fade" id="ticketModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -474,14 +486,13 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                     <button type="button" class="btn btn-warning" onclick=" window.location.href='knowledgebase.php'
                         ;">Lihat Daftar Panduan</button>
-                    <button type="button" class="btn btn-primary"
-                        onclick="window.location.href='index.php?a=add';">Kirim Aduan</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='index.php?a=add';">Kirim Aduan</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- <?php
-    /*******************************************************************************
+            /*******************************************************************************
     The code below handles HESK licensing and must be included in the template.
 
     Removing this code is a direct violation of the HESK End User License Agreement,
@@ -489,18 +500,18 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
 
     To purchase a HESK license and support future HESK development please visit:
     https://www.hesk.com/buy.php
-    *******************************************************************************/
-    $hesk_settings['hesk_license']('Qo8Zm9vdGVyIGNsYXNzPSJmb290ZXIiPg0KICAgIDxwIGNsY
+             *******************************************************************************/
+            $hesk_settings['hesk_license']('Qo8Zm9vdGVyIGNsYXNzPSJmb290ZXIiPg0KICAgIDxwIGNsY
     XNzPSJ0ZXh0LWNlbnRlciI+UG93ZXJlZCBieSA8YSBocmVmPSJodHRwczovL3d3dy5oZXNrLmNvbSIgY
     2xhc3M9ImxpbmsiPkhlbHAgRGVzayBTb2Z0d2FyZTwvYT4gPHNwYW4gY2xhc3M9ImZvbnQtd2VpZ2h0L
     WJvbGQiPkhFU0s8L3NwYW4+PGJyPk1vcmUgSVQgZmlyZXBvd2VyPyBUcnkgPGEgaHJlZj0iaHR0cHM6L
     y93d3cuc3lzYWlkLmNvbS8/dXRtX3NvdXJjZT1IZXNrJmFtcDt1dG1fbWVkaXVtPWNwYyZhbXA7dXRtX
     2NhbXBhaWduPUhlc2tQcm9kdWN0X1RvX0hQIiBjbGFzcz0ibGluayI+U3lzQWlkPC9hPjwvcD4NCjwvZ
     m9vdGVyPg0K', "\104", "a809404e0adf9823405ee0b536e5701fb7d3c969");
-    /*******************************************************************************
+            /*******************************************************************************
     END LICENSE CODE
-    *******************************************************************************/
-    ?> -->
+             *******************************************************************************/
+            ?> -->
 
     <footer>
         <!-- <div class="footer-banner wow fadeIn" data-wow-duration="1.0s" data-wow-delay="0.5s"><img src="img/home1/footer-banner.png" alt=""></div> -->
@@ -541,13 +552,19 @@ require_once(TEMPLATE_PATH . 'customer/util/rating.php');
     <!-- Scripts -->
 
     <!-- <script src="<?php echo TEMPLATE_PATH; ?>customer/js/jquery-3.5.1.min.js"></script> -->
-    <script
-        src="<?php echo TEMPLATE_PATH; ?>customer/js/hesk_functions.js?<?php echo $hesk_settings['hesk_version']; ?>"></script>
+    <script>
+        console.log("test1");
+    </script>
+    <script>
+        window.onload = function() {
+            $('#onLoadModal').modal('show');
+        }
+    </script>
+    <script src="<?php echo TEMPLATE_PATH; ?>customer/js/hesk_functions.js?<?php echo $hesk_settings['hesk_version']; ?>"></script>
     <?php outputSearchJavascript(); ?>
     <script src="<?php echo TEMPLATE_PATH; ?>customer/js/svg4everybody.min.js"></script>
     <script src="<?php echo TEMPLATE_PATH; ?>customer/js/selectize.min.js"></script>
-    <script
-        src="<?php echo TEMPLATE_PATH; ?>customer/js/app<?php echo $hesk_settings['debug_mode'] ? '' : '.min'; ?>.js?<?php echo $hesk_settings['hesk_version']; ?>"></script>
+    <script src="<?php echo TEMPLATE_PATH; ?>customer/js/app<?php echo $hesk_settings['debug_mode'] ? '' : '.min'; ?>.js?<?php echo $hesk_settings['hesk_version']; ?>"></script>
 
     <script src="<?php echo TEMPLATE_PATH; ?>customer/js/jquery-3.3.1.min.js"></script>
     <script src="<?php echo TEMPLATE_PATH; ?>customer/js/jquery-ui.js"></script>

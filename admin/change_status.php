@@ -11,6 +11,8 @@
  *
  */
 
+$is_closed = false;
+
 define('IN_SCRIPT', 1);
 define('HESK_PATH', '../');
 
@@ -82,6 +84,8 @@ if ($status == 3) // Closed
 
 	// Log who marked the ticket resolved
 	$closedby_sql = ' , `closedat`=NOW(), `closedby`=' . intval($_SESSION['id']) . ' ';
+	$is_closed = true;
+	// hesk_process_messages($action, 'admin_main.php', 'SUCCESS');
 } elseif ($status != 0) {
 	$status_name = hesk_get_status_name($status);
 	$action = sprintf($hesklang['tsst'], $status_name);
@@ -104,5 +108,8 @@ if (hesk_dbAffectedRows() != 1) {
 	hesk_error("$hesklang[int_error]: $hesklang[trackID_not_found].");
 }
 
-// hesk_process_messages($action, 'admin_ticket.php?track=' . $trackingID . '&Refresh=' . rand(10000, 99999), 'SUCCESS');
-hesk_process_messages($action, 'admin_main.php', 'SUCCESS');
+if ($is_closed) {
+	hesk_process_messages($action, 'admin_main.php', 'SUCCESS');
+} else {
+	hesk_process_messages($action, 'admin_ticket.php?track=' . $trackingID . '&Refresh=' . rand(10000, 99999), 'SUCCESS');
+}
