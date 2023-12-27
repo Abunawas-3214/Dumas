@@ -194,7 +194,8 @@ getStatisticData();
                 }
             },
             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun',
-                'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
+                'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'
+            ],
             crosshair: true
         }],
         yAxis: [{ // Primary yAxis
@@ -230,28 +231,18 @@ getStatisticData();
             opposite: true
         }],
         tooltip: {
-            shared: true
-        },
-        legend: {
-            itemStyle: {
-                fontWeight: 'bold',
-                fontSize: '10px'
-            },
-            align: 'left',
-            x: 80,
-            verticalAlign: 'top',
-            y: 60,
-            floating: true,
-            backgroundColor:
-                Highcharts.defaultOptions.legend.backgroundColor || // theme
-                'rgba(255,255,255,0.25)'
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
         },
         series: [{
             name: 'Tiket Terselesaikan',
             type: 'column',
             yAxis: 1,
-            data: [65, 86, 56, 24, 42, 6, 0, 0, 0,
-                0, 0, 0],
+            data: [66, 87, 57, 24, 46, 35, 37, 18, 6, 8, 9, 6],
             tooltip: {
                 /*  valueSuffix: ' mm' */
             }
@@ -259,104 +250,7 @@ getStatisticData();
         }, {
             name: 'Rata-rata Waktu Penyelesaian',
             type: 'spline',
-            data: [24, 14, 13, 22, 20, 110, 0, 0, 0,
-                0, 0, 0],
-            tooltip: {
-                valueSuffix: 'Menit'
-            }
-        }]
-    });
-</script>
-
-<script>
-    Highcharts.chart('statistik-bulanan-2022-time', {
-        chart: {
-            zoomType: 'xy'
-        },
-        title: {
-            text: 'Rata-rata Waktu Penyelesaian Per Tiket, 2023.',
-            align: 'center'
-        },
-        subtitle: {
-            text: 'Rata-rata waktu penyelesaian tiket pengaduan.',
-            align: 'center'
-        },
-        xAxis: [{
-            labels: {
-                /*    format: '{value}°C', */
-                style: {
-                    color: Highcharts.getOptions().colors[1],
-                    fontSize: '12px'
-                }
-            },
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun',
-                'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
-            crosshair: true
-        }],
-        yAxis: [{ // Primary yAxis
-            labels: {
-                format: '{value} Menit',
-                style: {
-                    color: Highcharts.getOptions().colors[1],
-                    fontSize: '12px'
-                }
-            },
-            title: {
-                text: 'Waktu Penyelesaian',
-                style: {
-                    color: Highcharts.getOptions().colors[1],
-                    fontSize: '12px'
-                }
-            }
-        }, { // Secondary yAxis
-            title: {
-                text: 'Tiket Terselesaikan',
-                style: {
-                    color: Highcharts.getOptions().colors[0],
-                    fontSize: '12px'
-                }
-            },
-            labels: {
-                /*  format: '{value} mm', */
-                style: {
-                    color: Highcharts.getOptions().colors[0],
-                    fontSize: '12px'
-                }
-            },
-            opposite: true
-        }],
-        tooltip: {
-            shared: true
-        },
-        legend: {
-            itemStyle: {
-                fontWeight: 'bold',
-                fontSize: '10px'
-            },
-            align: 'left',
-            x: 80,
-            verticalAlign: 'top',
-            y: 60,
-            floating: true,
-            backgroundColor:
-                Highcharts.defaultOptions.legend.backgroundColor || // theme
-                'rgba(255,255,255,0.25)'
-        },
-        series: [{
-            name: 'Tiket Terselesaikan',
-            type: 'column',
-            yAxis: 1,
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 22,
-                65, 56, 76],
-            tooltip: {
-                /*  valueSuffix: ' mm' */
-            }
-
-        }, {
-            name: 'Rata-rata Waktu Penyelesaian',
-            type: 'spline',
-            data: [0, 0, 0, 0, 0, 0, 0, 0, 5,
-                14, 77, 59],
+            data: [21, 12, 12, 16, 14, 37, 23, 14, 4, 5, 4, 3],
             tooltip: {
                 valueSuffix: 'Menit'
             }
@@ -441,15 +335,15 @@ getStatisticData();
         },
         series: [{
             name: 'Tiket',
-            data: [75, 101, 60, 35, 56, 12, 0, 0, 0, 0, 0, 0]
+            data: [75, 101, 60, 35, 56, 50, 57, 57, 53, 55, 83, 67]
 
         }, {
             name: 'Belum Terselesaikan',
-            data: [10, 15, 4, 11, 14, 6, 0, 0, 0, 0, 0, 0]
+            data: [9, 14, 3, 11, 10, 15, 20, 39, 47, 47, 74, 61]
 
         }, {
             name: 'Sudah Terselesaikan',
-            data: [65, 86, 56, 24, 42, 6, 0, 0, 0, 0, 0, 0]
+            data: [66, 87, 57, 24, 46, 35, 37, 18, 6, 8, 9, 6]
 
         }]
     });
@@ -459,7 +353,7 @@ getStatisticData();
     // Data retrieved from https://netmarketshare.com/
     // Radialize the colors
     Highcharts.setOptions({
-        colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+        colors: Highcharts.map(Highcharts.getOptions().colors, function(color) {
             return {
                 radialGradient: {
                     cx: 0.5,
@@ -518,35 +412,193 @@ getStatisticData();
                     fontSize: '12px'
                 }
             },
-            data: [
-                { name: 'Admisi', y: 4.424778761 },
-                { name: 'Akademik', y: 21.23893805 },
-                { name: 'Kemahasiswaan', y: 0.8849557522 },
-                { name: 'Laporan Gratifikasi', y: 0 },
-                { name: 'Email, Internet dan Aplikasi', y: 51.03244838 },
-                { name: 'Keuangan', y: 3.244837758 },
-                { name: 'Mahad', y: 0 },
-                { name: 'F Saintek', y: 2.949852507 },
-                { name: 'FKIK', y: 0.2949852507 },
-                { name: 'FITK', y: 0 },
-                { name: 'F Ekonomi', y: 0.2949852507 },
-                { name: 'F Syariah', y: 0.2949852507 },
-                { name: 'F Psikologi', y: 0 },
-                { name: 'F Humaniora', y: 0 },
-                { name: 'Pascasarjana', y: 0.5899705015 },
-                { name: 'LP2M', y: 0 },
-                { name: 'Perpustakaan', y: 1.769911504 },
-                { name: 'E-Journal', y: 0 },
-                { name: 'Sarana dan prasarana', y: 2.064896755 },
-                { name: 'Humas', y: 0 },
-                { name: 'PTIPD User Hotspot', y: 1.179941003 },
-                { name: 'PTIPD Problem Web', y: 4.424778761 },
-                { name: 'P3SR', y: 0 },
-                { name: 'Lain-Lain', y: 3.83480826 },
+            data: [{
+                    name: 'PMB / Admisi',
+                    y: 3.1
+                },
+                {
+                    name: 'Akademik',
+                    y: 16.2
+                },
+                {
+                    name: 'Kemahasiswaan',
+                    y: 0.9
+                },
+                {
+                    name: 'P3SR',
+                    y: 0.3
+                },
+                {
+                    name: 'Email, Internet dan Aplikasi',
+                    y: 65.7
+                },
+                {
+                    name: 'Keuangan',
+                    y: 2
+                },
+                {
+                    name: 'Mahad',
+                    y: 0.1
+                },
+                {
+                    name: 'F Saintek',
+                    y: 1.3
+                },
+                {
+                    name: 'FKIK',
+                    y: 0.1
+                },
+                {
+                    name: 'F Ekonomi',
+                    y: 0.1
+                },
+                {
+                    name: 'F Syariah',
+                    y: 0.1
+                },
+                {
+                    name: 'F Humaniora',
+                    y: 0.1
+                },
+                {
+                    name: 'Pascasarjana',
+                    y: 0.4
+                },
+                {
+                    name: 'LP2M',
+                    y: 0.3
+                },
+                {
+                    name: 'Perpustakaan',
+                    y: 2
+                },
+                {
+                    name: 'Sarana dan prasarana',
+                    y: 1.5
+                },
+                {
+                    name: 'Humas',
+                    y: 0.1
+                },
+                {
+                    name: 'PTIPD Daftar User Hotspot',
+                    y: 0.5
+                },
+                {
+                    name: 'PTIPD Problem Web, Server, Domain, Hosting',
+                    y: 2.7
+                },
+                {
+                    name: 'PTIPD Instalasi Jaringan Komputer',
+                    y: 0.7
+                },
+                {
+                    name: 'Lain-Lain',
+                    y: 1.7
+                },
             ]
         }]
     });
 </script>
+
+<script>
+    Highcharts.chart('statistik-bulanan-2022-time', {
+        chart: {
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'Rata-rata Waktu Penyelesaian Per Tiket, 2023.',
+            align: 'center'
+        },
+        subtitle: {
+            text: 'Rata-rata waktu penyelesaian tiket pengaduan.',
+            align: 'center'
+        },
+        xAxis: [{
+            labels: {
+                /*    format: '{value}°C', */
+                style: {
+                    color: Highcharts.getOptions().colors[1],
+                    fontSize: '12px'
+                }
+            },
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun',
+                'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'
+            ],
+            crosshair: true
+        }],
+        yAxis: [{ // Primary yAxis
+            labels: {
+                format: '{value} Menit',
+                style: {
+                    color: Highcharts.getOptions().colors[1],
+                    fontSize: '12px'
+                }
+            },
+            title: {
+                text: 'Waktu Penyelesaian',
+                style: {
+                    color: Highcharts.getOptions().colors[1],
+                    fontSize: '12px'
+                }
+            }
+        }, { // Secondary yAxis
+            title: {
+                text: 'Tiket Terselesaikan',
+                style: {
+                    color: Highcharts.getOptions().colors[0],
+                    fontSize: '12px'
+                }
+            },
+            labels: {
+                /*  format: '{value} mm', */
+                style: {
+                    color: Highcharts.getOptions().colors[0],
+                    fontSize: '12px'
+                }
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true
+        },
+        legend: {
+            itemStyle: {
+                fontWeight: 'bold',
+                fontSize: '10px'
+            },
+            align: 'left',
+            x: 80,
+            verticalAlign: 'top',
+            y: 60,
+            floating: true,
+            backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || // theme
+                'rgba(255,255,255,0.25)'
+        },
+        series: [{
+            name: 'Tiket Terselesaikan',
+            type: 'column',
+            yAxis: 1,
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 22,
+                65, 56, 76
+            ],
+            tooltip: {
+                /*  valueSuffix: ' mm' */
+            }
+
+        }, {
+            name: 'Rata-rata Waktu Penyelesaian',
+            type: 'spline',
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 5,
+                14, 77, 59
+            ],
+            tooltip: {
+                valueSuffix: 'Menit'
+            }
+        }]
+    });
+</script>
+
 
 <script>
     Highcharts.chart('statistik-bulanan-2022', {
@@ -686,31 +738,102 @@ getStatisticData();
                     fontSize: '12px'
                 }
             },
-            data: [
-                { name: 'Admisi', y: 2.212389381 },
-                { name: 'Akademik', y: 5.752212389 },
-                { name: 'Kemahasiswaan', y: 0 },
-                { name: 'Laporan Gratifikasi', y: 0 },
-                { name: 'Email, Internet dan Aplikasi', y: 82.30088496 },
-                { name: 'Keuangan', y: 0.4424778761 },
-                { name: 'Mahad', y: 0 },
-                { name: 'F Saintek', y: 0.4424778761 },
-                { name: 'FKIK', y: 0 },
-                { name: 'FITK', y: 0.4424778761 },
-                { name: 'F Ekonomi', y: 0 },
-                { name: 'F Syariah', y: 0.4424778761 },
-                { name: 'F Psikologi', y: 0 },
-                { name: 'F Humaniora', y: 0 },
-                { name: 'Pascasarjana', y: 0.4424778761 },
-                { name: 'LP2M', y: 0.8849557522 },
-                { name: 'Perpustakaan', y: 1.769911504 },
-                { name: 'E-Journal', y: 0 },
-                { name: 'Sarana dan prasarana', y: 1.327433628 },
-                { name: 'Humas', y: 0 },
-                { name: 'PTIPD User Hotspot', y: 1.327433628 },
-                { name: 'PTIPD Problem Web', y: 0 },
-                { name: 'P3SR', y: 0 },
-                { name: 'Lain-Lain', y: 2.212389381 },
+            data: [{
+                    name: 'Admisi',
+                    y: 2.212389381
+                },
+                {
+                    name: 'Akademik',
+                    y: 5.752212389
+                },
+                {
+                    name: 'Kemahasiswaan',
+                    y: 0
+                },
+                {
+                    name: 'Laporan Gratifikasi',
+                    y: 0
+                },
+                {
+                    name: 'Email, Internet dan Aplikasi',
+                    y: 82.30088496
+                },
+                {
+                    name: 'Keuangan',
+                    y: 0.4424778761
+                },
+                {
+                    name: 'Mahad',
+                    y: 0
+                },
+                {
+                    name: 'F Saintek',
+                    y: 0.4424778761
+                },
+                {
+                    name: 'FKIK',
+                    y: 0
+                },
+                {
+                    name: 'FITK',
+                    y: 0.4424778761
+                },
+                {
+                    name: 'F Ekonomi',
+                    y: 0
+                },
+                {
+                    name: 'F Syariah',
+                    y: 0.4424778761
+                },
+                {
+                    name: 'F Psikologi',
+                    y: 0
+                },
+                {
+                    name: 'F Humaniora',
+                    y: 0
+                },
+                {
+                    name: 'Pascasarjana',
+                    y: 0.4424778761
+                },
+                {
+                    name: 'LP2M',
+                    y: 0.8849557522
+                },
+                {
+                    name: 'Perpustakaan',
+                    y: 1.769911504
+                },
+                {
+                    name: 'E-Journal',
+                    y: 0
+                },
+                {
+                    name: 'Sarana dan prasarana',
+                    y: 1.327433628
+                },
+                {
+                    name: 'Humas',
+                    y: 0
+                },
+                {
+                    name: 'PTIPD User Hotspot',
+                    y: 1.327433628
+                },
+                {
+                    name: 'PTIPD Problem Web',
+                    y: 0
+                },
+                {
+                    name: 'P3SR',
+                    y: 0
+                },
+                {
+                    name: 'Lain-Lain',
+                    y: 2.212389381
+                },
             ]
         }]
     });
@@ -739,8 +862,7 @@ getStatisticData();
             statistikTahunan2022.style.display = "none";
             statistikBulanan2022.style.display = "none";
             statistik_bulanan_2022_time.style.display = "none";
-        }
-        else if (document.getElementById('filter-tahun').value == "2022") {
+        } else if (document.getElementById('filter-tahun').value == "2022") {
             /*  if (statistikTahunan2022.style.display === "none") {
                  statistikTahunan2022.style.display = "block";
                  statistikBulanan2022.style.display = "block";
