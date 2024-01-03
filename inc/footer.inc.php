@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * This file is part of HESK - PHP Help Desk Software.
@@ -29,7 +30,7 @@ will void all support and may result in unexpected behavior.
 
 To purchase a HESK license and support future HESK development please visit:
 https://www.hesk.com/buy.php
-*******************************************************************************/
+ *******************************************************************************/
 $hesk_settings['hesk_license']('Qo8Zm9vdGVyIGNsYXNzPSJmb290ZXIiPg0KICAgIDxwIGNsY
 XNzPSJ0ZXh0LWNlbnRlciI+UG93ZXJlZCBieSA8YSBocmVmPSJodHRwczovL3d3dy5oZXNrLmNvbSIgY
 2xhc3M9ImxpbmsiPkhlbHAgRGVzayBTb2Z0d2FyZTwvYT4gPHNwYW4gY2xhc3M9ImZvbnQtd2VpZ2h0L
@@ -39,7 +40,7 @@ y93d3cuc3lzYWlkLmNvbS8/dXRtX3NvdXJjZT1IZXNrJmFtcDt1dG1fbWVkaXVtPWNwYyZhbXA7dXRtX
 m9vdGVyPg0K', "\104", "a809404e0adf9823405ee0b536e5701fb7d3c969");
 /*******************************************************************************
 END LICENSE CODE
-*******************************************************************************/
+ *******************************************************************************/
 ?>
 </main> <!-- End main -->
 <?php
@@ -53,10 +54,10 @@ if (isset($login_wrapper)) {
 <?php
 // Do we need the calendar functions?
 if (defined('CALENDAR')) {
-    ?>
+?>
     <script src="<?php echo HESK_PATH; ?>js/datepicker.min.js"></script>
     <script type="text/javascript">
-        (function ($) {
+        (function($) {
             $.fn.datepicker.language['en'] = {
                 days: ['<?php echo $hesklang['d0']; ?>', '<?php echo $hesklang['d1']; ?>', '<?php echo $hesklang['d2']; ?>', '<?php echo $hesklang['d3']; ?>', '<?php echo $hesklang['d4']; ?>', '<?php echo $hesklang['d5']; ?>', '<?php echo $hesklang['d6']; ?>'],
                 daysShort: ['<?php echo $hesklang['sun']; ?>', '<?php echo $hesklang['mon']; ?>', '<?php echo $hesklang['tue']; ?>', '<?php echo $hesklang['wed']; ?>', '<?php echo $hesklang['thu']; ?>', '<?php echo $hesklang['fri']; ?>', '<?php echo $hesklang['sat']; ?>'],
@@ -71,22 +72,22 @@ if (defined('CALENDAR')) {
             };
         })(jQuery);
     </script>
-    <?php
+<?php
 }
 ?>
 
-<script type="text/javascript"
-    src="<?php echo HESK_PATH; ?>js/app<?php echo $hesk_settings['debug_mode'] ? '' : '.min'; ?>.js?<?php echo $hesk_settings['hesk_version']; ?>"></script>
+<script type="text/javascript" src="<?php echo HESK_PATH; ?>js/app<?php echo $hesk_settings['debug_mode'] ? '' : '.min'; ?>.js?<?php echo $hesk_settings['hesk_version']; ?>"></script>
 
 <?php
 // Any adjustments to datepicker?
-if (isset($hesk_settings['datepicker'])):
-    ?>
+if (isset($hesk_settings['datepicker'])) :
+?>
     <script>
+        function convertDateToUTC(date) {
+            return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
+        }
 
-        function convertDateToUTC(date) { return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds()); }
-
-        $(document).ready(function () {
+        $(document).ready(function() {
             const myDP = {};
             <?php
             foreach ($hesk_settings['datepicker'] as $selector => $data) {
@@ -102,7 +103,7 @@ if (isset($hesk_settings['datepicker'])):
                 }
             }
             ?>
-            $('.showme').click(function (e) {
+            $('.showme').click(function(e) {
                 $(this).addClass('active');
                 $(this).parent()
                     .find('.datepicker')
@@ -111,14 +112,14 @@ if (isset($hesk_settings['datepicker'])):
             });
         });
     </script>
-    <?php
+<?php
 endif;
 
 // Auto-select first empty or error field on non-staff pages?
 if (defined('AUTOFOCUS')) {
-    ?>
+?>
     <script language="javascript">
-        (function () {
+        (function() {
             var forms = document.forms || [];
             for (var i = 0; i < forms.length; i++) {
                 for (var j = 0; j < forms[i].length; j++) {
@@ -136,7 +137,7 @@ if (defined('AUTOFOCUS')) {
             }
         })();
     </script>
-    <?php
+<?php
 }
 
 // Apply status coloring to drop-down box; needs to be called after app.js
